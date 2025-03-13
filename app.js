@@ -1,18 +1,25 @@
-//ERRORS bugs
-const num = 8;
-num < 0 ? console.log("POSITIVE") : console.log("NEGATIVE"); // Logical error
+function calcSumOfNums() {
+  const num1 = prompt("Enter First Number: ");
+  const num2 = prompt("Enter Second Number: ");
 
-// synthax error - 
+  console.log(parseInt(num1) + parseInt(num2));
+}
 
-num > 0 ? console.log("POSITIVE"); : console.log("NEGATIVE"); // synthax error
+calcSumOfNums();
+// type conversion
+// numbers to strings tostring, sting
+// strings to numbers
+// 60 ===> '60
 
-console.log("Hello world");
+const num = 98;
+console.log(typeof num);
+console.log(typeof num.toString);
+console.log(typeof String(num));
 
-//referenceError
-console.log(Average);
-console.log(Num);
-
-//typeError
-console.log(num.includes("@"));
-
-
+//strings to number //ade //'98' -- 98
+//Number parseInt
+const myStr = "30";
+console.log(typeof myStr);
+console.log(typeof Number(myStr));
+console.log(typeof parseInt(myStr));
+console.log(parseInt(myStr) * 2);
