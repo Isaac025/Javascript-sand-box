@@ -25,6 +25,7 @@ function welcomeUser(name = "Anon") {
   console.log(`welcome ${name}`);
 }
 
+welcomeUser();
 welcomeUser("vera");
 welcomeUser("Quadri");
 welcomeUser("Uju");
@@ -83,7 +84,8 @@ checkChar("leaf");
 // John Doe
 
 function getInitials(firstname, lastname) {
-  console.log(firstname.charAt(0) + lastname.charAt(0));
+  const initials = firstname.charAt(0) + lastname.charAt(0);
+  console.log(initials);
   //   const initials =`${firstname.charAt(0).${lastname.charAt(0)}}`;
 }
 

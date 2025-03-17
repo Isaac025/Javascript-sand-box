@@ -31,6 +31,7 @@ console.log(email.startsWith("jj"));
 console.log(email.endsWith(".uk"));
 console.log(email.includes("Doe".toLowerCase()));
 console.log(email.toUpperCase().includes(".CO"));
+// console.log(email.includes("DOE".toLowerCase()));
 
 // trim, trimStart and trimEnd (removes white spaces)
 const username = "   ade001      ";
@@ -72,7 +73,7 @@ console.log(sentence);
 
 //template literals used to format variables inside of a string
 //``
-const sentence2 = `${author} wrote the book ${book}`;
+const sentence2 = `${author.toUpperCase()} wrote the book ${book}`;
 console.log(sentence2);
 
 const person = "Adam Sandler";

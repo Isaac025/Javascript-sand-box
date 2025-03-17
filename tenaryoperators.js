@@ -27,9 +27,9 @@ loanAmount <= 2 * balance
   ? console.log("ELIGIBLE FOR LOAN")
   : console.log("NOT ELIGIBLE");
 
-//declare two variables savings and transactional
+//declare two variables savings and transactionAmount
 let savings = 300000;
-let transactionAmount = -8000;
+let transactionAmount = 8000;
 
 transactionAmount < savings
   ? console.log("transaction Successful")

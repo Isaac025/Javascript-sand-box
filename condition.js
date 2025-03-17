@@ -69,9 +69,9 @@ if (email.includes("@")) {
 }
 
 // write a program that dusplays you passed the exams if
-// the score is greater than or equal to 50 otherwo
+// the score is greater than or equal to 50 otherwise failed
 
-const score = 32;
+const score = 72;
 
 if (score >= 50) {
   console.log("PASSED THE EXAM");
@@ -99,7 +99,7 @@ if (num1 > num2) {
 
 const myNum = 39;
 
-if (myNum % 2 == 0) {
+if (myNum % 2 === 0) {
   console.log(`${myNum} is EVEN`);
 } else {
   console.log(`${myNum} is ODD`);
@@ -145,7 +145,7 @@ if (transAmount > 2500) {
   console.log("Transaction Charge = 50");
 }
 
-let word = "BASKETBALL".toLowerCase();
+let word = "LYNX".toLowerCase();
 if (
   word.includes("a") ||
   word.includes("e") ||

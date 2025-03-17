@@ -12,11 +12,11 @@ console.log(userspin == enteredpin); //false
 
 let balance = 10000;
 let withdrawalAmount = 9000;
-balance >= withdrawalAmount; //f
+balance >= withdrawalAmount; //
 
-userspin === enteredpin && balance >= withdrawalAmount;
+userspin === enteredpin && balance >= withdrawalAmount; // false
 
-// logical operators and && or   not !
+// logical operators and && or || not !
 // and operator - every condition must be true
 // or just need one condition to be true
 console.log(3 < 4 && 5 < 8 && 10 > 15); // t and t and f
