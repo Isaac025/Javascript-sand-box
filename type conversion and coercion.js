@@ -24,7 +24,7 @@ console.log(typeof myStr);
 console.log(typeof Number(myStr));
 console.log(typeof parseInt(myStr));
 console.log(parseInt(myStr) * 2);
-console.log(+"30" + 2);
+console.log(+"30" + 2); //32
 
 //write a code thats a question using the prompt method
 //the question should say "Who is there?"
