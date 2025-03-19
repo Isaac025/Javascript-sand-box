@@ -61,7 +61,7 @@ const user = {
   },
 };
 
-//object methods - does write the function himself
+//object methods -the user writes the function himself
 //function declaration (this - refers to the object itself)
 // that tells user welcome username or log in to continue
 console.log(user.welcomeUser());
@@ -184,3 +184,4 @@ const { price, discount } = product;
 let newPrice = price - (discount / 100) * price;
 
 console.log(newPrice.toFixed(2));
+

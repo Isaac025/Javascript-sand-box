@@ -1,33 +1,59 @@
-// JS MATH OBJECT
+const cars = [
+  { name: "Lamborghini Huracan", rentPrice: 100, category: "sport" },
+  { name: "Range Rover Velar", rentPrice: 70, category: "suv" },
+  { name: "Audi R8", rentPrice: 120, category: "sport" },
+  { name: "Mustang", rentPrice: 80, category: "vintage" },
+  { name: "Porche 911", rentPrice: 120, category: "sport" },
+  { name: "Chevrolet Camaro 1970", rentPrice: 80, category: "vintage" },
+  { name: "Rolls Royce", rentPrice: 70, category: "sport" },
+  { name: "Tesla Model X", rentPrice: 120, category: "suv" },
+  { name: "BMW X5", rentPrice: 40, category: "suv" },
+  { name: "Volkswagen Beetle 1972", rentPrice: 30, category: "vintage" },
+];
 
-// sqrt, round, ceil, floor, pow, trunc, random,
-console.log(Math.sqrt(25));
-console.log(Math.pow(10, 2));
-console.log(10 ** 2);
-console.log(Math.round(4.29));
-console.log(Math.round(-1.3));
-console.log(Math.ceil(2.1));
-console.log(Math.floor(3.9));
-console.log(Math.trunc(11.99));
-//trunc removes the decimal part
+cars[1];
+cars[0].name;
 
-//Math.random - randoms generate random numbers bewteen 0 -1
-console.log(Math.random());
-console.log(Math.random() * 11);
-console.log(Math.trunc(Math.random() * 11));
+const vintageCars = cars.filter((car) => car.category === "vintage");
+console.log(vintageCars);
 
-// 1 -10
-console.log(Math.floor(Math.random() * 10 + 1));
+let totalrentPrice = cars.reduce((acc, car) => acc + car.rentPrice, 0);
 
-//raffle draw car
-const customers = ["Kelvin", "John", "Khalid", "David"];
+const carsMorethan100 = cars.every((c) => c.rentPrice > 100);
 
-const randomWinner = () => {
-  let randomNumber = Math.floor(Math.random() * customers.length);
-  return customers[randomNumber];
+let myName = "Kelvin";
+// == ===
+
+let data = {
+  success: true,
+  message: "Product in Stock",
+  products: ["Glasses", "Lipssticks", "Shoes"],
 };
 
-console.log(randomWinner());
+console.log(data.products[2]);
 
-//OTP generator 
+const meals = [
+  {
+    meal: {
+      name: "Sushi",
+      price: 45,
+      category: "Side",
+    },
+  },
+];
 
+console.log();
+
+const airline = {
+  types: [
+    {
+      name: {
+        brand: "Air Peace",
+        brand2: "Green Africa",
+        brand3: "Max Air",
+        brand4: "Emirates",
+      },
+    },
+  ],
+};
+console.log(airline.types[0].name.brand3);
