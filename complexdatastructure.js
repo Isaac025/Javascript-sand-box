@@ -156,4 +156,4 @@ let totalCost = shoppingCart.reduce((acc, item) => {
   return acc + item.price * item.qty;
 }, 0);
 
-console.log("Total cost is "+ totalCost);
+console.log("Total cost is " + totalCost);

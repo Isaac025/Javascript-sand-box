@@ -23,6 +23,7 @@ console.log(others);
 //array - structured data type
 const countries = ["Togo", "Nigeria", "Ghana", "Cameroon", "Benin"];
 const [a, ...rest] = countries;
+console.log(rest);
 
 const product = {
   title: "Micheal Kors",
@@ -31,6 +32,7 @@ const product = {
 };
 
 const { price, ...property } = product;
+console.log(property);
 
 //spread operator ...
 
