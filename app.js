@@ -1,145 +1,106 @@
-// //write a simple atm js algo
-// //checkBalance
-// //withdrawAmount
-// //depositAmount
-// //checkPin
+//Document object Model (DOM)
 
-// let balance = 5000;
-// let pin = 1234;
-// let attempts = 3;
+//select element on the document, tagName(h1, p), className, idName
+//combinations
 
-// function checkPin(enteredPin) {
-//   while (attempts > 0) {
-//     let enteredPin = parseInt(prompt("Enter your PIN:"));
-//     if (enteredPin === pin) {
-//       attempts = 3;
-//       startAtm();
-//       alert("Start ATM");
-//     } else {
-//       attempts--;
+// const headings = document.getElementsByTagName("h1");
+// console.log(headings);
+// // console.log(headings[0]);
 
-//       alert(`incorrect pin, ${attempts} attempts left`);
-//     }
-//   }
+// const myH1s = document.getElementsByClassName("heading");
+// console.log(myH1s);
 
-//   alert("Your Card has been blocked");
-// }
+// const textPara = document.getElementById("text");
+// console.log(textPara);
 
-// // console.log(checkPin(2345));
-// // console.log(attempts);
+//querySelector(css selector) one thing(the first one it sees)
+//., #, div p
 
-// function startAtm(choice) {
-//   if (choice === 1) {
-//     //withdrawal
-//     withdrawAmount(1000);
-//   } else if (choice === 2) {
-//     //deposit
-//     depositAmount(3000);
-//   } else if (choice === 3) {
-//     //checkBalance
-//     checkBalance();
-//   } else if (choice === 4) {
-//     //exit
-//     return "Thank you for banking with us";
-//   } else {
-//     //invalid option
-//     return "Invalid option, try again";
-//   }
-// }
+//queryselectorAll
+// const firstPara = document.querySelector("p");
+// console.log(firstPara);
 
-// function checkBalance() {
-//   return `your current balance is $${balance}`;
-// }
+// const allParas = document.querySelectorAll("p");
+// console.log(allParas);
 
-// function withdrawAmount(amount) {
-//   if (amount < balance) {
-//     balance -= amount;
-//     return "withdrawal successful";
-//   } else {
-//     return "insufficient funds";
-//   }
-// }
+//interacting with the contents on the document
+//textContent, innerText, innerHTMl
 
-// console.log(withdrawAmount(500));
-// console.log(checkBalance());
+const heading = document.querySelector(".heading");
+console.log(heading.textContent);
+console.log(heading.innerText);
+heading.textContent += " JS IS FUN";
 
-// function depositAmount(amount) {
-//   balance += amount;
-//   return "deposit successful";
-// }
+// heading.innerText = "JS IS FUN";
 
-// console.log(depositAmount(3000));
-// console.log(checkBalance());
+const container = document.querySelector("div");
+console.log(container.innerHTML);
+container.innerHTML += "<a href='https://google.com'>visit google</a>";
 
-const pin = 1234;
-let attempts = 3;
-let balance = 5000;
+const myName = "Azeez Thiago";
+const firstName = "Azeez";
+const lastName = "Thiago";
+// const initails = "A.T";
+const intro = document.querySelector("h2");
+intro.textContent = `Welcome ${firstName.charAt(0)}.${lastName.charAt(0)}`;
+//welcome initiials
 
-function checkPin() {
-  while (attempts > 0) {
-    let enteredPin = parseInt(prompt("Enter your PIN:"));
+//interact with attributes
+const myLink = document.querySelector(".myLink");
 
-    if (enteredPin === pin) {
-      alert("PIN accepted. Welcome!");
-      atmMenu();
-      return;
-    } else {
-      attempts--;
-      alert(`Incorrect PIN. You have ${attempts} attempts left.`);
-    }
+//facebook
+myLink.textContent = "Facebook";
+myLink.setAttribute("href", "https://facebook.com");
+myLink.setAttribute("target", "_blank");
+myLink.getAttribute("href");
+console.log(myLink.getAttribute("href"));
+
+//interact with styles
+myLink.style.color = "red";
+myLink.style.textDecoration = "none";
+
+const btn = document.querySelector("button");
+// btn.className = "mybtn";
+//classList
+btn.classList.add("mybtn");
+btn.classList.add("kelvin");
+//remove classnames
+btn.classList.remove("kelvin");
+
+//create element in js
+const section = document.createElement("section");
+section.innerHTML = "<h1>Created from JS</h1>";
+section.className = "mysection";
+
+//append it body or wherever it is needed
+const body = document.querySelector("body");
+
+body.appendChild(section);
+
+//respondng to users interaction
+//1. event e.g. click, submit 2. event handler, function
+const testbtn = document.querySelector(".testbtn");
+
+testbtn.addEventListener("click", () => {
+  console.log("User clicked");
+  body.style.backgroundColor = "red";
+});
+
+//form handling
+//submit
+//click
+//form refreshes the page when submitted
+const form = document.querySelector("form");
+const fullname = document.querySelector(".fullname");
+const small = document.querySelector("form small");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const fullNameValue = fullname.value.trim();
+  console.log("form submitted", fullNameValue);
+  //validate the input
+  if (fullNameValue === "") {
+    small.style.display = "block";
+    small.textContent = "Please provide a name";
   }
-
-  alert("You have been locked out. Please contact the bank.");
-}
-
-function checkBalance() {
-  alert(`Your current balance is $${balance}`);
-}
-
-function withdraw() {
-  let amount = parseFloat(prompt("Enter amount to withdraw:"));
-
-  if (isNaN(amount) || amount <= 0) {
-    alert("Invalid amount.");
-  } else if (amount > balance) {
-    alert("Insufficient funds.");
-  } else {
-    balance -= amount;
-    alert(`Withdrawal successful. New balance: $${balance}`);
-  }
-}
-
-function deposit() {
-  let amount = parseFloat(prompt("Enter amount to deposit:"));
-
-  if (isNaN(amount) || amount <= 0) {
-    alert("Invalid amount.");
-  } else {
-    balance += amount;
-    alert(`Deposit successful. New balance: $${balance}`);
-  }
-}
-
-function atmMenu() {
-  while (true) {
-    let choice = prompt(
-      "Choose an option:\n1. Check Balance\n2. Withdraw Money\n3. Deposit Money\n4. Exit"
-    );
-
-    if (choice === "1") {
-      checkBalance();
-    } else if (choice === "2") {
-      withdraw();
-    } else if (choice === "3") {
-      deposit();
-    } else if (choice === "4") {
-      alert("Thank you for using the ATM.");
-      return;
-    } else {
-      alert("Invalid option. Try again.");
-    }
-  }
-}
-
-// Start the ATM program
-checkPin();
+});

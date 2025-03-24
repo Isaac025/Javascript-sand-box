@@ -9,7 +9,7 @@
 // if (i < 5) {
 //   console.log("Hello world");
 // }
-// i++
+// i++;
 
 //initializer condition increment
 for (let i = 1; i <= 5; i++) {
@@ -39,14 +39,14 @@ console.log(sum);
 //   y++;
 // }
 // 0-5
-// let b = 0;
-// let sum2 = 0;
-// while (b <= 5) {
-//   sum2 += b;
-//   b++;
-// }
+let b = 0;
+let sum2 = 0;
+while (b <= 5) {
+  sum2 += b;
+  b++;
+}
 
-// console.log(sum2);
+console.log(sum2);
 // Vera
 const people = ["Leo", "Tobi", "Vera", "Quadri", "Isaac", "JayCole"];
 console.log(people.length);

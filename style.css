@@ -1,0 +1,30 @@
+.mybtn {
+  background-color: blue;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.idan {
+  text-transform: uppercase;
+}
+
+.kelvin:hover {
+  background-color: white;
+  color: blue;
+}
+
+.mysection {
+  background-color: blue;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px auto;
+  /* color: white; */
+}
+small {
+  display: none;
+}
